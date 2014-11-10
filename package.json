@@ -2,10 +2,12 @@
   "name": "anonymous",
   "version": "0.0.1",
   "dependencies": {
-    "d3": "*",
+    "d3": "*"
+  },
+  "devDependencies": {
     "smash": "*",
     "mocha": "*"
-  },
+  }
   "main": "index.js",
   "scripts": {
     "prepublish": "make"
