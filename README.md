@@ -14,4 +14,4 @@ Mainly useful to get two alternative notations from a number, e.g. for a bar cha
 
 Using https://github.com/mbostock/d3/wiki/Formatting
 
-Initiated at <img src="https://www.qunb.com/public/src/img/brand/qunbsmall.png" height="30" align="middle" alt="qunb">
+Initiated at <a target="_blank" href="https://www.qunb.com"><img src="https://www.qunb.com/public/src/img/brand/qunbsmall.png" height="14px" alt="qunb" /></a>
