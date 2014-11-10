@@ -6,4 +6,4 @@ LIBRARY_FILES = \
 
 
 lib.js: $(LIBRARY_FILES)
-	node_modules/.bin/smash $(LIBRARY_FILES) > d3.format.js
+	node_modules/.bin/smash $(LIBRARY_FILES) | sed -e "s/d3/d3f/g" > d3f.js

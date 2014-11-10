@@ -1,4 +1,6 @@
-require('./d3.format')
+// Import a renamed version of d3 with just the formatting methods
+// It should avoid compatibility issues
+require('./d3f')
 
 /* o looks like :
 	{
@@ -14,7 +16,7 @@ function format(fmt, o, appendUnit) {
     o.value = NaN // These are correctly handled by the formatter
   }
   var unit = appendUnit && o.unitLabel ? ' ' + o.unitLabel : ''
-  var number = o.value === 0 ? "0" : d3.format(fmt)(o.value)
+  var number = o.value === 0 ? "0" : d3f.format(fmt)(o.value)
   return number + unit
 }
 
@@ -30,8 +32,8 @@ function shortFormat(o, sign) {
   } else if (v < 1) {
     return format(sign + ".1f", o)
   } else if (v >= 1) {
-    var reste = d3.formatPrefix(v).scale(v) // e.g. 17 892 -> 17.892
-    if (reste < 10 && d3.round(reste) === reste) {
+    var reste = d3f.formatPrefix(v).scale(v) // e.g. 17 892 -> 17.892
+    if (reste < 10 && d3f.round(reste) === reste) {
       return format(sign + ".1s", o)
     } else if (reste < 100) {
       return format(sign + ".2s", o)
@@ -48,7 +50,7 @@ function altValue(o, sign) {
   var p = o.precision
 
   /* Do not add a .00 when value is a round number (thanks d3 for not including this... or did I miss something ?) */
-  if (d3.round(o.value) === o.value) {
+  if (d3f.round(o.value) === o.value) {
     p = 0
   } else if (p == undefined) {
     /* default precision */
