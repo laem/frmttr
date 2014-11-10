@@ -7,7 +7,7 @@
   "devDependencies": {
     "smash": "*",
     "mocha": "*"
-  }
+  },
   "main": "index.js",
   "scripts": {
     "prepublish": "make"
