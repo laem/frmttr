@@ -1,0 +1,13 @@
+{
+  "name": "anonymous",
+  "version": "0.0.1",
+  "dependencies": {
+    "d3": "*",
+    "smash": "*",
+    "mocha": "*"
+  },
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "make"
+  }
+}
