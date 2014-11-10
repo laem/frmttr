@@ -1,4 +1,4 @@
-var d3 = require('./d3.format')
+require('./d3.format')
 
 /* o looks like :
 	{
